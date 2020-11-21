@@ -9,8 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class SecondActivity extends AppCompatActivity {
-    private EditText editText_1;
-    private EditText editText_2;
+//    private EditText editText_1;
+//    private EditText editText_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +20,9 @@ public class SecondActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
-//                startActivity(intent);
+                startActivity(intent);
             }
         });
         Button button1 = (Button) findViewById(R.id.button_4);
@@ -32,8 +33,8 @@ public class SecondActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        editText_1 = (EditText) findViewById(R.id.edit1);
-        editText_2 = (EditText) findViewById(R.id.edit2);
+//        editText_1 = (EditText) findViewById(R.id.edit1);
+//        editText_2 = (EditText) findViewById(R.id.edit2);
 
     }
 }
