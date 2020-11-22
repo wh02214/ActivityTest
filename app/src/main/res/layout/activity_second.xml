@@ -1,45 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="53dp" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="74dp"
-        android:text="请登录"
-        android:textSize="60dp"
-        android:textColor="@android:color/background_dark"/>
+        android:text="登录"
+        android:textColor="@android:color/background_dark"
+        android:textSize="60dp" />
 
+    <TextView
+        android:layout_width="262dp"
+        android:layout_height="33dp"
+        android:text="您好，欢迎来到知乎日报!"
+        android:textSize="22dp" />
 
-    <EditText
-        android:id="@+id/edit1"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="账号"
-        android:maxLines="1" />
+        android:background="@drawable/button_background"
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/edit2"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_user" />
+
+        <EditText
+            android:id="@+id/edit1"
+            android:layout_width="371dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入账号"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="8dp" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="密码"
-        android:inputType="textPassword" />
+        android:background="@drawable/button_background"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_password" />
+
+        <EditText
+            android:id="@+id/edit2"
+            android:layout_width="371dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入密码"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/button_4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:text="sign up" />
+        android:text="登录" />
 
     <Button
         android:id="@+id/button_2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:text="sign  in"
-        android:textColor="@color/teal_200" />
+        android:layout_gravity="center"
+        android:text="没有账号？立即注册" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imagebutton_sina"
+                android:layout_width="194dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:src="@drawable/account_sina" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="新浪微博登录" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imagebutton_tencent"
+                android:layout_width="219dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:src="@drawable/account_tencent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="    腾讯微博登录" />
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 
 </LinearLayout>
