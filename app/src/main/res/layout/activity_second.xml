@@ -65,9 +65,12 @@
             android:inputType="textPassword" />
     </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    <RadioButton
+        android:id="@+id/radiobutton1"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_gravity="end"
+        android:text="同意用户协议" />
 
     <Button
         android:id="@+id/button_4"
@@ -81,6 +84,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:backgroundTint="#00000000"
+        android:textColor="@color/black"
         android:text="没有账号？立即注册" />
 
     <LinearLayout
@@ -97,7 +102,7 @@
             <ImageButton
                 android:id="@+id/imagebutton_sina"
                 android:layout_width="194dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:src="@drawable/account_sina" />
 
@@ -106,6 +111,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:text="新浪微博登录" />
+
         </LinearLayout>
 
         <LinearLayout
