@@ -9,15 +9,14 @@
         android:id="@+id/button_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="百度一下你就知道" />
+        android:text="百度一下" />
 
     <ImageButton
         android:id="@+id/button_5"
         android:layout_width="128dp"
         android:layout_height="111dp"
         android:layout_gravity="end"
-        android:src="@drawable/img_phone"
-        android:text="拨打电话" />
+        android:src="@drawable/img_phone" />
 
 
 </LinearLayout>

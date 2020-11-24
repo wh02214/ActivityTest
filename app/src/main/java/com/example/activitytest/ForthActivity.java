@@ -1,5 +1,6 @@
 package com.example.activitytest;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.Image;
@@ -15,6 +16,10 @@ public class ForthActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forth);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.hide();
+        }
         ImageButton imageButton = (ImageButton) findViewById(R.id.button_back);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override

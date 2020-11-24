@@ -1,5 +1,6 @@
 package com.example.activitytest;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,13 +13,16 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity {
-//    private EditText editText_1;
-//    private EditText editText_2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.hide();
+        }
         Button button = (Button) findViewById(R.id.button_2);
         ImageButton imageButton = (ImageButton) findViewById(R.id.imagebutton_sina);//新浪登录
         ImageButton imageButton1 = (ImageButton) findViewById(R.id.imagebutton_tencent);//腾讯登录
