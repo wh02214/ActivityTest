@@ -4,9 +4,12 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
@@ -16,14 +19,28 @@ public class SecondActivity extends AppCompatActivity {
 
     private EditText accountEdit;
     private EditText passwordEdit;
+    private SharedPreferences preferences;
+    private SharedPreferences.Editor editor;
+    private CheckBox rememberPass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+        preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        rememberPass = (CheckBox) findViewById(R.id.remember_pass);
         accountEdit = (EditText) findViewById(R.id.edit_account);
         passwordEdit = (EditText) findViewById(R.id.edit_password);
-        ActionBar actionBar = getSupportActionBar();
+        boolean isRemember = preferences.getBoolean("remember_password", false);
+        if (isRemember) {
+            String account = preferences.getString("account", "");
+            String password = preferences.getString("password", "");
+            accountEdit.setText(account);
+            passwordEdit.setText(password);
+            rememberPass.setChecked(true);
+        }
+
+        ActionBar actionBar = getSupportActionBar();              //hid
         if (actionBar != null) {
             actionBar.hide();
         }
@@ -46,8 +63,18 @@ public class SecondActivity extends AppCompatActivity {
                 String account = accountEdit.getText().toString();
                 String password = passwordEdit.getText().toString();
                 if (account.equals("123456") && password.equals("123456")) {
+                    editor = preferences.edit();                 //remember password
+                    if (rememberPass.isChecked()) {
+                        editor.putBoolean("remember_password", true);
+                        editor.putString("account", account);
+                        editor.putString("password", password);
+                    } else {
+                        editor.clear();
+                    }
+                    editor.apply();
                     Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
                     startActivity(intent);
+                    finish();
                 } else {
                     Toast.makeText(SecondActivity.this, "账号或密码错误", Toast.LENGTH_SHORT).show();
                 }
