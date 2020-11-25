@@ -24,7 +24,7 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("http://www.baidu.com"));
+                intent.setData(Uri.parse("http://s.61.com/home/?tad=innermedia.seer.free.icon"));
                 startActivity(intent);
             }
         });

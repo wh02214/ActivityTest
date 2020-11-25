@@ -74,7 +74,6 @@ public class SecondActivity extends AppCompatActivity {
                     editor.apply();
                     Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
                     startActivity(intent);
-                    finish();
                 } else {
                     Toast.makeText(SecondActivity.this, "账号或密码错误", Toast.LENGTH_SHORT).show();
                 }

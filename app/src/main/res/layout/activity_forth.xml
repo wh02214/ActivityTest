@@ -13,7 +13,7 @@
         <ImageButton
             android:id="@+id/button_back"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@color/white"
             android:src="@drawable/ic_back_register" />
 
@@ -28,7 +28,7 @@
 
     <ImageView
         android:id="@+id/img_1"
-        android:layout_width="328dp"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:src="@drawable/splash_logo" />
@@ -45,6 +45,7 @@
             android:src="@drawable/ic_user" />
 
         <EditText
+            android:id="@+id/set_account"
             android:layout_width="371dp"
             android:layout_height="wrap_content"
             android:hint="请输入账号"
@@ -68,6 +69,7 @@
             android:src="@drawable/ic_password" />
 
         <EditText
+            android:id="@+id/set_password"
             android:layout_width="371dp"
             android:layout_height="wrap_content"
             android:hint="请输入密码"
@@ -92,6 +94,7 @@
             android:src="@drawable/ic_password" />
 
         <EditText
+            android:id="@+id/reset_password"
             android:layout_width="371dp"
             android:layout_height="wrap_content"
             android:hint="再次输入密码"
@@ -101,7 +104,7 @@
     </LinearLayout>
 
     <CheckBox
-        android:id="@+id/radiobutton1"
+        android:id="@+id/checkbox_agree"
         android:layout_width="wrap_content"
         android:layout_height="37dp"
         android:layout_gravity="end"

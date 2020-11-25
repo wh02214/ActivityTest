@@ -9,7 +9,9 @@
         android:id="@+id/button_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="百度一下" />
+        android:backgroundTint="#AA3030"
+        android:text="赛尔号，启动！"
+        android:textColor="#F8F6F6" />
 
     <ImageButton
         android:id="@+id/button_5"
