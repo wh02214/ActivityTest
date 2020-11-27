@@ -33,7 +33,7 @@ public class ForthActivity extends AppCompatActivity {
                 finish();
             }
         });
-        Button button = (Button) findViewById(R.id.button_sign_up);
+        Button button = (Button) findViewById(R.id.sign_up);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
