@@ -18,6 +18,7 @@ public class ForthActivity extends AppCompatActivity {
     private EditText account;
     private EditText password;
     private EditText password0;
+    private CheckBox agree;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,8 @@ public class ForthActivity extends AppCompatActivity {
         account = (EditText) findViewById(R.id.set_account);
         password = (EditText) findViewById(R.id.set_password);
         password0 = (EditText) findViewById(R.id.reset_password);
+        agree = (CheckBox) findViewById(R.id.checkbox_agree);
+
         ////////////////////////////////////////////////////////
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -51,6 +54,10 @@ public class ForthActivity extends AppCompatActivity {
                     Toast.makeText(ForthActivity.this, "两次输入的密码不一致", Toast.LENGTH_SHORT).show();
                 } else if (password_re.isEmpty() || account1.isEmpty() || password1.isEmpty()) {
                     Toast.makeText(ForthActivity.this, "还有未输入的空格", Toast.LENGTH_SHORT).show();
+                } else if (account1.length() > 8 || password1.length() > 8) {
+                    Toast.makeText(ForthActivity.this, "账号或密码长度不能超过八位", Toast.LENGTH_SHORT).show();
+                } else if (!agree.isChecked()) {
+                    Toast.makeText(ForthActivity.this, "请阅读协议，同意后继续", Toast.LENGTH_SHORT).show();
                 } else {
                     editor.putString("account", account1);
                     editor.putString("password", password1);
