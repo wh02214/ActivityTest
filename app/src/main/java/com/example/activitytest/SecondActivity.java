@@ -50,7 +50,6 @@ public class SecondActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {                    //注册
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(SecondActivity.this, ForthActivity.class);
                 startActivity(intent);
             }
@@ -62,7 +61,10 @@ public class SecondActivity extends AppCompatActivity {
                 //登录逻辑
                 String account = accountEdit.getText().toString();
                 String password = passwordEdit.getText().toString();
-                if (account.equals("123456") && password.equals("123456")) {
+                SharedPreferences pref = getSharedPreferences("usersmessage", MODE_PRIVATE);
+                String account_have = pref.getString("account", "");
+                String password_have = pref.getString("password", "");
+                if (account.equals(account_have) && password.equals(password_have)) {
                     editor = preferences.edit();                 //remember password
                     if (rememberPass.isChecked()) {
                         editor.putBoolean("remember_password", true);
