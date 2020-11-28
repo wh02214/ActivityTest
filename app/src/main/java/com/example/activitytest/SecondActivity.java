@@ -13,6 +13,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity {
@@ -45,8 +46,8 @@ public class SecondActivity extends AppCompatActivity {
             actionBar.hide();
         }
         Button button = (Button) findViewById(R.id.sigh_up);
-        ImageButton imageButton = (ImageButton) findViewById(R.id.imagebutton_sina);//新浪登录
-        ImageButton imageButton1 = (ImageButton) findViewById(R.id.imagebutton_tencent);//腾讯登录
+        TextView textView = (TextView) findViewById(R.id.sina);//新浪登录
+        TextView textView1 = (TextView) findViewById(R.id.tencent);//腾讯登录
         button.setOnClickListener(new View.OnClickListener() {                    //注册
             @Override
             public void onClick(View v) {
@@ -81,13 +82,13 @@ public class SecondActivity extends AppCompatActivity {
                 }
             }
         });
-        imageButton.setOnClickListener(new View.OnClickListener() {           //新浪
+        textView.setOnClickListener(new View.OnClickListener() {           //新浪
             @Override
             public void onClick(View v) {
                 Toast.makeText(SecondActivity.this, "新浪登录", Toast.LENGTH_SHORT).show();
             }
         });
-        imageButton1.setOnClickListener(new View.OnClickListener() {          //腾讯
+        textView1.setOnClickListener(new View.OnClickListener() {          //腾讯
             @Override
             public void onClick(View v) {
                 Toast.makeText(SecondActivity.this, "腾讯微博登录", Toast.LENGTH_SHORT).show();
