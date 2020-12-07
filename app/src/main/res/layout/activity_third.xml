@@ -20,10 +20,10 @@
 
     <ImageButton
         android:id="@+id/button_5"
-        android:layout_width="128dp"
-        android:layout_height="111dp"
+        android:layout_width="match_parent"
+        android:layout_height="443dp"
         android:layout_gravity="end"
-        android:src="@drawable/img_phone" />
+        android:src="@drawable/ic_1" />
 
 
 </LinearLayout>

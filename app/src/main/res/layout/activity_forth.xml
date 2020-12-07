@@ -28,6 +28,10 @@
             android:textSize="26dp" />
     </LinearLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="146dp" />
+
     <ImageView
         android:id="@+id/img_1"
         android:layout_width="411dp"
@@ -36,9 +40,10 @@
         android:src="@drawable/splash_logo" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="305dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_background"
+        android:layout_gravity="center"
+        android:background="@drawable/view_background"
         android:orientation="horizontal">
 
         <ImageView
@@ -48,7 +53,7 @@
 
         <EditText
             android:id="@+id/set_account"
-            android:layout_width="371dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:hint="请输入账号"
             android:maxLines="1" />
@@ -60,9 +65,10 @@
         android:layout_height="10dp" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="305dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_background"
+        android:layout_gravity="center"
+        android:background="@drawable/view_background"
         android:orientation="horizontal">
 
         <ImageView
@@ -72,7 +78,7 @@
 
         <EditText
             android:id="@+id/set_password"
-            android:layout_width="371dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:hint="请输入密码"
             android:inputType="textPassword" />
@@ -85,9 +91,10 @@
         android:layout_height="10dp" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="305dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_background"
+        android:layout_gravity="center"
+        android:background="@drawable/view_background"
         android:orientation="horizontal">
 
         <ImageView
@@ -97,7 +104,7 @@
 
         <EditText
             android:id="@+id/reset_password"
-            android:layout_width="371dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:hint="再次输入密码"
             android:inputType="textPassword" />
@@ -107,15 +114,17 @@
 
     <CheckBox
         android:id="@+id/checkbox_agree"
-        android:layout_width="wrap_content"
+        android:layout_width="170dp"
         android:layout_height="37dp"
         android:layout_gravity="end"
         android:text="同意用户协议" />
 
     <Button
         android:id="@+id/sign_up"
-        android:layout_width="match_parent"
+        android:layout_width="168dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#2196F3"
         android:text="注册" />
 
 </LinearLayout>
