@@ -13,7 +13,7 @@
         android:layout_marginTop="30dp" />
 
     <TextView
-        android:layout_width="276dp"
+        android:layout_width="292dp"
         android:layout_height="74dp"
         android:layout_gravity="center"
         android:text="Welcome"

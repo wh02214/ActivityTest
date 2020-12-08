@@ -8,22 +8,11 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="match_parent"
-        android:layout_height="115dp" />
+        android:layout_height="match_parent" />
 
-    <Button
-        android:id="@+id/button_3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#AA3030"
-        android:text="赛尔号，启动！"
-        android:textColor="#F8F6F6" />
 
-    <ImageButton
-        android:id="@+id/button_5"
-        android:layout_width="match_parent"
-        android:layout_height="443dp"
-        android:layout_gravity="end"
-        android:src="@drawable/ic_1" />
+
+
 
 
 </LinearLayout>

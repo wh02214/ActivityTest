@@ -72,7 +72,9 @@ public class SecondActivity extends AppCompatActivity {
                 SharedPreferences pref = getSharedPreferences("usersmessage", MODE_PRIVATE);
                 String account_have = pref.getString("account", "");
                 String password_have = pref.getString("password", "");
-                if (account.equals(account_have) && password.equals(password_have)) {
+                if (account.equals("") || password.equals("")) {
+                    Toast.makeText(SecondActivity.this, "账号或密码不能为空", Toast.LENGTH_SHORT).show();
+                } else if (account.equals(account_have) && password.equals(password_have)) {
                     editor = preferences.edit();                 //remember password
                     if (rememberPass.isChecked()) {
                         editor.putBoolean("remember_password", true);

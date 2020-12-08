@@ -50,28 +50,10 @@ public class ThirdActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
-        Button button3 = (Button) findViewById(R.id.button_3);
-        ImageButton imageButton = (ImageButton) findViewById(R.id.button_5);
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("http://s.61.com/home/?tad=innermedia.seer.free.icon"));
-                startActivity(intent);
-            }
-        });
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent2 = new Intent(Intent.ACTION_VIEW);
-                intent2.setData(Uri.parse("tel:"));
-                startActivity(intent2);
-            }
-        });
         recyclerView = findViewById(R.id.rv);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        ((LinearLayoutManager) layoutManager).setOrientation(LinearLayoutManager.HORIZONTAL);
+        ((LinearLayoutManager) layoutManager).setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(rvAdapter);
 
@@ -85,6 +67,11 @@ public class ThirdActivity extends AppCompatActivity {
         list.add(new RvData("项目八"));
         list.add(new RvData("项目九"));
         list.add(new RvData("项目十"));
+        list.add(new RvData("项目十一"));
+        list.add(new RvData("项目十二"));
+        list.add(new RvData("项目十三"));
+        list.add(new RvData("项目十四"));
+        list.add(new RvData("项目十五"));
 
         rvAdapter.notifyDataSetChanged();
     }
